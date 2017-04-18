@@ -41,26 +41,39 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css?root=${sourceRoot}']
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css?root=${sourceRoot}', 'sass']
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         // images
         test: /\.(jpg|gif|png|svg|ico)(\?.*)?$/,
-        loader: 'file?name=[path][name].[ext]'
+        use: [
+          'file-loader'
+        ]
       },
       {
         // fonts
         test:/\.(eot|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'file?name=[path][name].[ext]'
+        use: [
+          'file-loader'
+        ]
       },
       {
         // audio
         test: /\.(ogg|wav|mp3)(\?.*)?$/,
-        loader: 'file?name=[path][name].[ext]'
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },

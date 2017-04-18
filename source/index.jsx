@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import Application from '~/components/Application'
+
 ReactDOM.render(
-  <h1 className="page-heading">Hello world!</h1>,
+  <Application />,
   document.getElementById('ROOT')
 )
